@@ -1,5 +1,6 @@
 <script setup lang="ts">
 
+import { matMenu, matWhatshot } from '@quasar/extras/material-icons'
     // Fonts
     const { $getFont } = useBoosterFonts()
 
@@ -18,14 +19,14 @@
     <q-layout view="lHh lpr lFf" container style="height: 400px" class="shadow-2 rounded-borders">
       <q-header elevated>
         <q-toolbar>
-          <q-btn flat round dense icon="menu" class="q-mr-sm" />
+          <q-btn flat round dense :icon="matMenu" class="q-mr-sm" />
           <q-avatar>
             <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg">
           </q-avatar>
 
           <q-toolbar-title>Quasar Framework</q-toolbar-title>
 
-          <q-btn flat round dense icon="whatshot" />
+          <q-btn flat round dense :icon="matWhatshot" />
         </q-toolbar>
       </q-header>
 

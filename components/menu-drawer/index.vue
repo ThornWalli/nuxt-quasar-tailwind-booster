@@ -1,42 +1,49 @@
 <script setup lang="ts">
 
+    import { matMenu, matInbox,
+    matSend,
+    matDelete,
+    matError,
+    matSettings,
+    matFeedback,
+    matHelp } from '@quasar/extras/material-icons'
     // Fonts
     const { $getFont } = useBoosterFonts(undefined)
 
     const drawer = ref(false)
     const menuList = [
       {
-        icon: 'inbox',
+        icon: matInbox,
         label: 'Inbox',
         separator: true
       },
       {
-        icon: 'send',
+        icon: matSend,
         label: 'Outbox',
         separator: false
       },
       {
-        icon: 'delete',
+        icon: matDelete,
         label: 'Trash',
         separator: false
       },
       {
-        icon: 'error',
+        icon: matError,
         label: 'Spam',
         separator: true
       },
       {
-        icon: 'settings',
+        icon: matSettings,
         label: 'Settings',
         separator: false
       },
       {
-        icon: 'feedback',
+        icon: matFeedback,
         label: 'Send Feedback',
         separator: false
       },
       {
-        icon: 'help',
+        icon: matHelp,
         iconColor: 'primary',
         label: 'Help',
         separator: false
@@ -61,7 +68,7 @@
     <q-layout view="hHh Lpr lff" container style="height: 300px" class="shadow-2 rounded-borders">
       <q-header elevated :class="$q.dark.isActive ? 'bg-secondary' : 'bg-black'">
         <q-toolbar>
-          <q-btn flat @click="drawer = !drawer" round dense icon="menu" />
+          <q-btn flat @click="drawer = !drawer" round dense :icon="matMenu" />
           <q-toolbar-title>Header</q-toolbar-title>
         </q-toolbar>
       </q-header>

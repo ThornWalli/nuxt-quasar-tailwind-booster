@@ -1,5 +1,13 @@
 <script setup lang="ts">
 
+import { matMenu, matInbox,
+    matSend,
+    matDelete,
+    matError,
+    matSettings,
+    matFeedback,
+    matHelp } from '@quasar/extras/material-icons'
+    
     // Fonts
     const { $getFont } = useBoosterFonts()
 
